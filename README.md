@@ -1,4 +1,5 @@
 # Table of Contents
+~~text with line through it~~
 1. [Example](#example)
 2. [Example2](#example2)
 3. [Third Example](#third-example)
