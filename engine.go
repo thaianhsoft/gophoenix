@@ -1,11 +1,24 @@
 package engine
 
-import "gophoenix/field"
+import (
+	"gophoenix/edge"
+	"gophoenix/field"
+)
 
-type migrator interface{
+type SchemaMigrate interface{
 	migrate()
+	Fields() []field.Field
+	Edges() []edge.Edge
 }
 
-func (e *engine) createTable(field field.Field) {
+type Engine struct {
+
+}
+
+func (e *Engine) createTable(sc SchemaMigrate) {
+
+}
+
+func NewEngine() *Engine {
 
 }

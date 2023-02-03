@@ -11,9 +11,10 @@ const (
 	NULL
 	UNIQUE
 )
-type FormatField uint32
+
 type Field interface {
 	Name(v string) Field
 	SetOp(ops ...GeOp) Field // set generic option of 4 ops
 }
+
 
