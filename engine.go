@@ -5,6 +5,10 @@ import (
 	"gophoenix/field"
 )
 
+type Migrator interface{
+	Migrate()
+}
+
 type SchemaMigrate interface{
 	migrate()
 	Fields() []field.Field
@@ -15,7 +19,7 @@ type Engine struct {
 
 }
 
-func (e *Engine) createTable(sc SchemaMigrate) {
+func (e *Engine) createTable(sc SchemaMigrate, driverDB string) {
 
 }
 
